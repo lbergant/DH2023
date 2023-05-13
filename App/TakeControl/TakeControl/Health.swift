@@ -23,7 +23,32 @@ struct Health: View {
                 ha.initHealthAPI()
             }
             Button("API request"){
-                ha.queryActivitySummary();
+//                ha.queryActivitySummary();
+                ha.readStepsTakenToday { (steps, error) in
+                    if let error = error {
+                        print("Error retrieving steps taken: \(error.localizedDescription)")
+                        return
+                    }
+
+                    if let steps = steps {
+                        print("Steps taken today: \(steps)")
+                    } else {
+                        print("Steps data not available for today.")
+                    }
+                }
+                
+                ha.readStepGoal{(steps, error) in
+                    if let error = error {
+                        print("Error retrieving steps goal: \(error.localizedDescription)")
+                        return
+                    }
+                    
+                    if let steps = steps {
+                        print("Steps goal: \(steps)")
+                    } else {
+                        print("Steps data goal not available for today.")
+                    }
+                }
             }
             
         }
@@ -58,7 +83,8 @@ struct HealthAPI{
     func requestHealthKitAuthorization() {
         // Define the types of data you want to read
         let typesToRead: Set<HKObjectType> = [
-            HKObjectType.activitySummaryType()]
+            HKObjectType.activitySummaryType(),
+            HKObjectType.quantityType(forIdentifier: .stepCount)!]
         
         // Request authorization from the user
         healthStore.requestAuthorization(toShare: [], read: typesToRead) { (success, error) in
@@ -115,6 +141,75 @@ struct HealthAPI{
             }
         }
         
+        healthStore.execute(query)
+    }
+    
+    func readStepGoal(completion: @escaping (Double?, Error?) -> Void) {
+        guard let stepCountType = HKObjectType.quantityType(forIdentifier: .stepCount) else {
+            print("Step count type is not available.")
+            completion(nil, nil)
+            return
+        }
+        
+        let calendar = Calendar.current
+        let now = Date()
+        let startOfDay = calendar.startOfDay(for: now)
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let query = HKStatisticsQuery(quantityType: stepCountType, quantitySamplePredicate: predicate, options: .mostRecent) { (query, result, error) in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            if let result = result, let averageQuantity = result.averageQuantity() {
+                let goal = averageQuantity.doubleValue(for: HKUnit.count())
+                completion(goal, nil)
+            } else {
+                completion(nil, nil)
+            }
+        }
+        
+        healthStore.execute(query)
+    }
+
+    
+    func readStepsTakenToday(completion: @escaping (Double?, Error?) -> Void) {
+        guard let stepCountType = HKObjectType.quantityType(forIdentifier: .stepCount) else {
+            print("Step count type is not available.")
+            completion(nil, nil)
+            return
+        }
+
+        let calendar = Calendar.current
+        let now = Date()
+        let startOfDay = calendar.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+
+        let query = HKStatisticsCollectionQuery(quantityType: stepCountType, quantitySamplePredicate: predicate, options: .cumulativeSum, anchorDate: startOfDay, intervalComponents: DateComponents(day: 1))
+
+        query.initialResultsHandler = { query, statisticsCollection, error in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+
+            guard let statisticsCollection = statisticsCollection else {
+                completion(nil, nil)
+                return
+            }
+
+            statisticsCollection.enumerateStatistics(from: startOfDay, to: now) { statistics, _ in
+                if let sum = statistics.sumQuantity() {
+                    let steps = sum.doubleValue(for: HKUnit.count())
+                    completion(steps, nil)
+                } else {
+                    completion(nil, nil)
+                }
+            }
+        }
+
         healthStore.execute(query)
     }
     
