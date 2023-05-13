@@ -19,7 +19,13 @@
 		EC72D0FF2A0FE9690007CE41 /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D0FC2A0FE9690007CE41 /* ScreenTime.swift */; };
 		EC72D1002A0FE9690007CE41 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D0FD2A0FE9690007CE41 /* HomePage.swift */; };
 		EC72D1012A0FE9690007CE41 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D0FE2A0FE9690007CE41 /* Health.swift */; };
-		ECC020A82A0FE73F00B10072 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC020A72A0FE73F00B10072 /* MainView.swift */; };
+		EC72D1032A0FF3E70007CE41 /* AppMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1022A0FF3E70007CE41 /* AppMainView.swift */; };
+		EC72D1052A0FF7770007CE41 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1042A0FF7770007CE41 /* EditView.swift */; };
+		EC72D1072A0FF7960007CE41 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1062A0FF7960007CE41 /* SettingsView.swift */; };
+		EC72D1092A0FF7AB0007CE41 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1082A0FF7AB0007CE41 /* GoalsView.swift */; };
+		EC72D10B2A1005830007CE41 /* editViewGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D10A2A1005830007CE41 /* editViewGraph.swift */; };
+		EC72D1102A100ADB0007CE41 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D10F2A100ADB0007CE41 /* ColorConstants.swift */; };
+		EC72D1152A10109D0007CE41 /* TestText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1142A10109D0007CE41 /* TestText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +61,13 @@
 		EC72D0FC2A0FE9690007CE41 /* ScreenTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTime.swift; sourceTree = "<group>"; };
 		EC72D0FD2A0FE9690007CE41 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		EC72D0FE2A0FE9690007CE41 /* Health.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
-		ECC020A72A0FE73F00B10072 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EC72D1022A0FF3E70007CE41 /* AppMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainView.swift; sourceTree = "<group>"; };
+		EC72D1042A0FF7770007CE41 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		EC72D1062A0FF7960007CE41 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		EC72D1082A0FF7AB0007CE41 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		EC72D10A2A1005830007CE41 /* editViewGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editViewGraph.swift; sourceTree = "<group>"; };
+		EC72D10F2A100ADB0007CE41 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		EC72D1142A10109D0007CE41 /* TestText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,8 @@
 		A1DBCD0F2A0FB16A0052A592 /* TakeControl */ = {
 			isa = PBXGroup;
 			children = (
+				EC72D1112A100C8C0007CE41 /* Tests */,
+				EC72D10C2A100A420007CE41 /* Constants */,
 				ECC020A02A0FE59400B10072 /* APIs */,
 				ECC020A22A0FE6CD00B10072 /* Models */,
 				ECC0209F2A0FE58D00B10072 /* Views */,
@@ -149,6 +163,22 @@
 			path = TakeControlUITests;
 			sourceTree = "<group>";
 		};
+		EC72D10C2A100A420007CE41 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EC72D10F2A100ADB0007CE41 /* ColorConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EC72D1112A100C8C0007CE41 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EC72D1142A10109D0007CE41 /* TestText.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		ECC0209D2A0FE56600B10072 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +214,7 @@
 		ECC020A12A0FE6AA00B10072 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				EC72D1022A0FF3E70007CE41 /* AppMainView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -198,6 +229,7 @@
 		ECC020A42A0FE6F300B10072 /* GoalsView */ = {
 			isa = PBXGroup;
 			children = (
+				EC72D1082A0FF7AB0007CE41 /* GoalsView.swift */,
 			);
 			path = GoalsView;
 			sourceTree = "<group>";
@@ -205,6 +237,7 @@
 		ECC020A52A0FE70C00B10072 /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
+				EC72D1062A0FF7960007CE41 /* SettingsView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -212,7 +245,8 @@
 		ECC020A62A0FE71500B10072 /* EditView */ = {
 			isa = PBXGroup;
 			children = (
-				ECC020A72A0FE73F00B10072 /* MainView.swift */,
+				EC72D1042A0FF7770007CE41 /* EditView.swift */,
+				EC72D10A2A1005830007CE41 /* editViewGraph.swift */,
 			);
 			path = EditView;
 			sourceTree = "<group>";
@@ -351,8 +385,14 @@
 				A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */,
 				EC72D0FF2A0FE9690007CE41 /* ScreenTime.swift in Sources */,
 				A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */,
-				ECC020A82A0FE73F00B10072 /* MainView.swift in Sources */,
+				EC72D1102A100ADB0007CE41 /* ColorConstants.swift in Sources */,
 				EC72D1012A0FE9690007CE41 /* Health.swift in Sources */,
+				EC72D1152A10109D0007CE41 /* TestText.swift in Sources */,
+				EC72D1072A0FF7960007CE41 /* SettingsView.swift in Sources */,
+				EC72D1052A0FF7770007CE41 /* EditView.swift in Sources */,
+				EC72D1092A0FF7AB0007CE41 /* GoalsView.swift in Sources */,
+				EC72D1032A0FF3E70007CE41 /* AppMainView.swift in Sources */,
+				EC72D10B2A1005830007CE41 /* editViewGraph.swift in Sources */,
 				EC72D1002A0FE9690007CE41 /* HomePage.swift in Sources */,
 				A1DBCD112A0FB16A0052A592 /* TakeControlApp.swift in Sources */,
 			);
