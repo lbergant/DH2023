@@ -16,6 +16,7 @@
 		A1DBCD272A0FB16C0052A592 /* TakeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD262A0FB16C0052A592 /* TakeControlTests.swift */; };
 		A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */; };
 		A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */; };
+		ECC020A82A0FE73F00B10072 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC020A72A0FE73F00B10072 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A1DBCD2C2A0FB16C0052A592 /* TakeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITests.swift; sourceTree = "<group>"; };
 		A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECC020A72A0FE73F00B10072 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,11 @@
 		A1DBCD0F2A0FB16A0052A592 /* TakeControl */ = {
 			isa = PBXGroup;
 			children = (
+				ECC020A02A0FE59400B10072 /* APIs */,
+				ECC020A22A0FE6CD00B10072 /* Models */,
+				ECC0209F2A0FE58D00B10072 /* Views */,
+				ECC0209E2A0FE57800B10072 /* View Models */,
+				ECC0209D2A0FE56600B10072 /* Assets */,
 				A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */,
 				A1DBCD122A0FB16A0052A592 /* ContentView.swift */,
 				A1DBCD142A0FB16B0052A592 /* Assets.xcassets */,
@@ -131,6 +138,74 @@
 				A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */,
 			);
 			path = TakeControlUITests;
+			sourceTree = "<group>";
+		};
+		ECC0209D2A0FE56600B10072 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		ECC0209E2A0FE57800B10072 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		ECC0209F2A0FE58D00B10072 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECC020A62A0FE71500B10072 /* EditView */,
+				ECC020A52A0FE70C00B10072 /* SettingsView */,
+				ECC020A42A0FE6F300B10072 /* GoalsView */,
+				ECC020A12A0FE6AA00B10072 /* MainView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECC020A02A0FE59400B10072 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		ECC020A12A0FE6AA00B10072 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		ECC020A22A0FE6CD00B10072 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECC020A42A0FE6F300B10072 /* GoalsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GoalsView;
+			sourceTree = "<group>";
+		};
+		ECC020A52A0FE70C00B10072 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		ECC020A62A0FE71500B10072 /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				ECC020A72A0FE73F00B10072 /* MainView.swift */,
+			);
+			path = EditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +341,7 @@
 				A1DBCD1A2A0FB16B0052A592 /* Persistence.swift in Sources */,
 				A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */,
 				A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */,
+				ECC020A82A0FE73F00B10072 /* MainView.swift in Sources */,
 				A1DBCD112A0FB16A0052A592 /* TakeControlApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
