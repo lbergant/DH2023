@@ -8,8 +8,40 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State var healthApiResult = ""
+    @StateObject var model = Model.shared
+    @State var isPresented = false
+    @State private var showChatGPTView = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let ha = HealthAPI.init(buttonText: $healthApiResult)
+        
+        VStack{
+            Button("prva stvar - luka") {
+                ha.initHealthAPI()
+            }
+            .padding(.all)
+            Button("druga stvar - petr") {
+                Task { await initScreenTimeAPI() }
+            }
+            .padding(.all)
+            Button("tretja stvar - petr") {
+                isPresented = true
+            }
+            .familyActivityPicker(isPresented: $isPresented, selection: $model.selectionToDiscourage)
+            .padding(.all)
+            Button("lala - petr") {
+                model.initiateMonitoring()
+            }
+            .padding(.all)
+            Button("ChatGPT View") {
+                    showChatGPTView = true
+                }
+                .padding()
+        }
+        .sheet(isPresented: $showChatGPTView) {
+            ChatGPT()
+        }
     }
 }
 

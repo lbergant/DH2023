@@ -16,12 +16,11 @@
 		A1DBCD272A0FB16C0052A592 /* TakeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD262A0FB16C0052A592 /* TakeControlTests.swift */; };
 		A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */; };
 		A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */; };
-		EC72D1002A0FE9690007CE41 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D0FD2A0FE9690007CE41 /* HomePage.swift */; };
+		EC35027C2A104D54007F4DEF /* ChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027B2A104D54007F4DEF /* ChatGPT.swift */; };
 		EC72D1012A0FE9690007CE41 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D0FE2A0FE9690007CE41 /* Health.swift */; };
 		EC72D1032A0FF3E70007CE41 /* AppMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1022A0FF3E70007CE41 /* AppMainView.swift */; };
 		EC72D1072A0FF7960007CE41 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1062A0FF7960007CE41 /* SettingsView.swift */; };
 		EC72D1092A0FF7AB0007CE41 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1082A0FF7AB0007CE41 /* GoalsView.swift */; };
-		EC72D1102A100ADB0007CE41 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D10F2A100ADB0007CE41 /* ColorConstants.swift */; };
 		EC72D1152A10109D0007CE41 /* TestText.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1142A10109D0007CE41 /* TestText.swift */; };
 		ECAB7FAB2A103FB5009315D8 /* ActivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB7FA82A103FB5009315D8 /* ActivityMonitor.swift */; };
 		ECAB7FAC2A103FB5009315D8 /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAB7FA92A103FB5009315D8 /* ScreenTime.swift */; };
@@ -60,12 +59,11 @@
 		A1DBCD2C2A0FB16C0052A592 /* TakeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITests.swift; sourceTree = "<group>"; };
 		A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EC72D0FD2A0FE9690007CE41 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		EC35027B2A104D54007F4DEF /* ChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT.swift; sourceTree = "<group>"; };
 		EC72D0FE2A0FE9690007CE41 /* Health.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		EC72D1022A0FF3E70007CE41 /* AppMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainView.swift; sourceTree = "<group>"; };
 		EC72D1062A0FF7960007CE41 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EC72D1082A0FF7AB0007CE41 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
-		EC72D10F2A100ADB0007CE41 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
 		EC72D1142A10109D0007CE41 /* TestText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestText.swift; sourceTree = "<group>"; };
 		ECAB7FA82A103FB5009315D8 /* ActivityMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityMonitor.swift; sourceTree = "<group>"; };
 		ECAB7FA92A103FB5009315D8 /* ScreenTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTime.swift; sourceTree = "<group>"; };
@@ -123,21 +121,14 @@
 		A1DBCD0F2A0FB16A0052A592 /* TakeControl */ = {
 			isa = PBXGroup;
 			children = (
-				ECAB7FB62A10413A009315D8 /* TakeControl.entitlements */,
-				ECAB7FA12A103EC9009315D8 /* ScreenTime */,
-				EC72D1112A100C8C0007CE41 /* Tests */,
-				EC72D10C2A100A420007CE41 /* Constants */,
-				ECC020A02A0FE59400B10072 /* APIs */,
-				ECC020A22A0FE6CD00B10072 /* Models */,
-				ECC0209F2A0FE58D00B10072 /* Views */,
-				ECC0209E2A0FE57800B10072 /* View Models */,
-				ECC0209D2A0FE56600B10072 /* Assets */,
 				A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */,
 				A1DBCD122A0FB16A0052A592 /* ContentView.swift */,
-				EC72D0FE2A0FE9690007CE41 /* Health.swift */,
-				EC72D0FD2A0FE9690007CE41 /* HomePage.swift */,
+				ECAB7FB62A10413A009315D8 /* TakeControl.entitlements */,
+				EC72D1112A100C8C0007CE41 /* Tests */,
+				ECC020A22A0FE6CD00B10072 /* Models */,
+				ECC0209F2A0FE58D00B10072 /* Views */,
+				ECC0209D2A0FE56600B10072 /* Assets */,
 				A1DBCD142A0FB16B0052A592 /* Assets.xcassets */,
-				A1DBCD192A0FB16B0052A592 /* Persistence.swift */,
 				A1DBCD1B2A0FB16B0052A592 /* TakeControl.xcdatamodeld */,
 				A1DBCD162A0FB16B0052A592 /* Preview Content */,
 			);
@@ -169,12 +160,12 @@
 			path = TakeControlUITests;
 			sourceTree = "<group>";
 		};
-		EC72D10C2A100A420007CE41 /* Constants */ = {
+		EC35027A2A104D2C007F4DEF /* Chat(gpt) */ = {
 			isa = PBXGroup;
 			children = (
-				EC72D10F2A100ADB0007CE41 /* ColorConstants.swift */,
+				EC35027B2A104D54007F4DEF /* ChatGPT.swift */,
 			);
-			path = Constants;
+			path = "Chat(gpt)";
 			sourceTree = "<group>";
 		};
 		EC72D1112A100C8C0007CE41 /* Tests */ = {
@@ -202,29 +193,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		ECC0209E2A0FE57800B10072 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
 		ECC0209F2A0FE58D00B10072 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC35027A2A104D2C007F4DEF /* Chat(gpt) */,
 				ECC020A62A0FE71500B10072 /* EditView */,
 				ECC020A52A0FE70C00B10072 /* SettingsView */,
 				ECC020A42A0FE6F300B10072 /* GoalsView */,
 				ECC020A12A0FE6AA00B10072 /* MainView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		ECC020A02A0FE59400B10072 /* APIs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = APIs;
 			sourceTree = "<group>";
 		};
 		ECC020A12A0FE6AA00B10072 /* MainView */ = {
@@ -238,6 +216,9 @@
 		ECC020A22A0FE6CD00B10072 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ECAB7FA12A103EC9009315D8 /* ScreenTime */,
+				EC72D0FE2A0FE9690007CE41 /* Health.swift */,
+				A1DBCD192A0FB16B0052A592 /* Persistence.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,7 +382,6 @@
 				A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */,
 				A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */,
 				ECAB7FAC2A103FB5009315D8 /* ScreenTime.swift in Sources */,
-				EC72D1102A100ADB0007CE41 /* ColorConstants.swift in Sources */,
 				EC72D1012A0FE9690007CE41 /* Health.swift in Sources */,
 				EC72D1152A10109D0007CE41 /* TestText.swift in Sources */,
 				ECAB7FAB2A103FB5009315D8 /* ActivityMonitor.swift in Sources */,
@@ -410,8 +390,8 @@
 				ECAB7FB52A1040F1009315D8 /* EditView.swift in Sources */,
 				EC72D1092A0FF7AB0007CE41 /* GoalsView.swift in Sources */,
 				EC72D1032A0FF3E70007CE41 /* AppMainView.swift in Sources */,
+				EC35027C2A104D54007F4DEF /* ChatGPT.swift in Sources */,
 				ECAB7FB42A1040F1009315D8 /* EditGroupView.swift in Sources */,
-				EC72D1002A0FE9690007CE41 /* HomePage.swift in Sources */,
 				A1DBCD112A0FB16A0052A592 /* TakeControlApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

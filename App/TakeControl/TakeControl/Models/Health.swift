@@ -10,61 +10,61 @@ import HealthKit
 
 let healthStore = HKHealthStore()
 
-struct Health: View {
-    @State var result = "";
-    
-    var body: some View {
-        let ha = HealthAPI.init(buttonText: $result)
-        
-        VStack{
-            Text("Health")
-            Text(result)
-            Button("Init health API") {
-                ha.initHealthAPI()
-            }
-            Button("API request"){
-                ha.queryActivitySummary();
-                ha.readStepsTakenToday { (steps, error) in
-                    if let error = error {
-                        print("Error retrieving steps taken: \(error.localizedDescription)")
-                        return
-                    }
+//struct Health: View {
+//    @State var result = "";
+//
+//    var body: some View {
+//        let ha = HealthAPI.init(buttonText: $result)
+//
+//        VStack{
+//            Text("Health")
+//            Text(result)
+//            Button("Init health API") {
+//                ha.initHealthAPI()
+//            }
+//            Button("API request"){
+//                ha.queryActivitySummary();
+//                ha.readStepsTakenToday { (steps, error) in
+//                    if let error = error {
+//                        print("Error retrieving steps taken: \(error.localizedDescription)")
+//                        return
+//                    }
+//
+//                    if let steps = steps {
+//                        print("Steps taken today: \(steps)")
+//                        result = result + "Steps: \(steps) "
+//                    } else {
+//                        print("Steps data not available for today.")
+//                    }
+//                }
+//
+//                ha.readStepGoal{(steps, error) in
+//                    if let error = error {
+//                        print("Error retrieving steps goal: \(error.localizedDescription)")
+//                        return
+//                    }
+//
+//                    if let steps = steps {
+//                        print("Steps goal: \(steps)")
+//                        result += "Goal: \(steps)"
+//                    } else {
+//                        print("Steps data goal not available for today.")
+//                        result = result + "/5000"
+//                    }
+//                }
+//            }
+//
+//        }
+//
+//
+//    }
+//}
 
-                    if let steps = steps {
-                        print("Steps taken today: \(steps)")
-                        result = result + "Steps: \(steps) "
-                    } else {
-                        print("Steps data not available for today.")
-                    }
-                }
-                
-                ha.readStepGoal{(steps, error) in
-                    if let error = error {
-                        print("Error retrieving steps goal: \(error.localizedDescription)")
-                        return
-                    }
-                    
-                    if let steps = steps {
-                        print("Steps goal: \(steps)")
-                        result += "Goal: \(steps)"
-                    } else {
-                        print("Steps data goal not available for today.")
-                        result = result + "/5000"
-                    }
-                }
-            }
-            
-        }
-        
-        
-    }
-}
-
-struct Health_Previews: PreviewProvider {
-    static var previews: some View {
-        Health()
-    }
-}
+//struct Health_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Health()
+//    }
+//}
 
 struct HealthAPI{
     @Binding var buttonText: String
