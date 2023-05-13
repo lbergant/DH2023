@@ -30,7 +30,7 @@ class Model: ObservableObject {
     }
 
     func initiateMonitoring() {
-        let schedule = DeviceActivitySchedule(intervalStart: DateComponents(hour: 22, minute: 3), intervalEnd: DateComponents(hour: 23, minute: 59), repeats: true, warningTime: nil)
+        let schedule = DeviceActivitySchedule(intervalStart: DateComponents(hour: 0, minute: 0), intervalEnd: DateComponents(hour: 23, minute: 59), repeats: true, warningTime: nil)
 
         let center = DeviceActivityCenter()
         do {
