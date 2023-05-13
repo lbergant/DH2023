@@ -6,15 +6,39 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct Health: View {
+    @State var result : String = "";
+    
     var body: some View {
-        Text("Health")
+        VStack{
+            Text("Health")
+            Text(result)
+            Button("Init health API") {
+                if initHealthAPI(){
+                    result = "OK"
+                }else{
+                    result = "NOK"
+                }
+            }
+            
+        }
+        
+        
     }
 }
 
 struct Health_Previews: PreviewProvider {
     static var previews: some View {
         Health()
+    }
+}
+
+func initHealthAPI()-> Bool{
+    if HKHealthStore.isHealthDataAvailable() {
+        return true
+    }else{
+        return false
     }
 }
