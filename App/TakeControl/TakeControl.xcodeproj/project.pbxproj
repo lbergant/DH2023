@@ -16,6 +16,9 @@
 		A1DBCD272A0FB16C0052A592 /* TakeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD262A0FB16C0052A592 /* TakeControlTests.swift */; };
 		A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */; };
 		A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */; };
+		A1DBCD402A0FC18A0052A592 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD3F2A0FC18A0052A592 /* HomePage.swift */; };
+		A1DBCD422A0FC1C20052A592 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD412A0FC1C20052A592 /* Health.swift */; };
+		A1DBCD442A0FC1D10052A592 /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD432A0FC1D10052A592 /* ScreenTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		A1DBCD2C2A0FB16C0052A592 /* TakeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITests.swift; sourceTree = "<group>"; };
 		A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1DBCD3F2A0FC18A0052A592 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		A1DBCD412A0FC1C20052A592 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
+		A1DBCD432A0FC1D10052A592 /* ScreenTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 			children = (
 				A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */,
 				A1DBCD122A0FB16A0052A592 /* ContentView.swift */,
+				A1DBCD412A0FC1C20052A592 /* Health.swift */,
+				A1DBCD432A0FC1D10052A592 /* ScreenTime.swift */,
+				A1DBCD3F2A0FC18A0052A592 /* HomePage.swift */,
 				A1DBCD142A0FB16B0052A592 /* Assets.xcassets */,
 				A1DBCD192A0FB16B0052A592 /* Persistence.swift */,
 				A1DBCD1B2A0FB16B0052A592 /* TakeControl.xcdatamodeld */,
@@ -263,6 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DBCD402A0FC18A0052A592 /* HomePage.swift in Sources */,
+				A1DBCD422A0FC1C20052A592 /* Health.swift in Sources */,
+				A1DBCD442A0FC1D10052A592 /* ScreenTime.swift in Sources */,
 				A1DBCD1A2A0FB16B0052A592 /* Persistence.swift in Sources */,
 				A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */,
 				A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */,
