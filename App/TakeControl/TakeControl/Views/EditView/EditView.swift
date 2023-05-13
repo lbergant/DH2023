@@ -8,21 +8,15 @@
 import SwiftUI
 
 struct EditView: View {
+
+    let groups = ["Group 1", "Group 2", "Group 3", "Group 4", "Group 5"]
+
     var body: some View {
-        NavigationView {
-            List {
-                // Replace with your list of apps
-                Text("App 1")
-                Text("App 2")
-                Text("App 3")
-            }
-            .navigationBarTitle("App limits:")
-            .navigationBarItems(trailing:
-                NavigationLink(destination: EditView()) {
-                    Text("Edit")
-                }
-            )
+        List(groups, id: \.self) { group in
+            
+            Text(group)
         }
+        .listStyle(SidebarListStyle())
     }
 }
 
