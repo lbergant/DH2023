@@ -8,6 +8,8 @@
 import SwiftUI
 import HealthKit
 
+let healthStore = HKHealthStore()
+
 struct Health: View {
     @State var result : String = "";
     
@@ -16,11 +18,7 @@ struct Health: View {
             Text("Health")
             Text(result)
             Button("Init health API") {
-                if initHealthAPI(){
-                    result = "OK"
-                }else{
-                    result = "NOK"
-                }
+                initHealthAPI()
             }
             Button("API request"){
                 queryActivitySummary(startDate: Date.now, endDate: Date.now);
@@ -38,11 +36,34 @@ struct Health_Previews: PreviewProvider {
     }
 }
 
-func initHealthAPI()-> Bool{
-    if HKHealthStore.isHealthDataAvailable() {
-        return true
+func handleAPIAuthorization(status : Bool){
+    if status{
+        
     }else{
-        return false
+        
+    }
+}
+
+func initHealthAPI(){
+    if HKHealthStore.isHealthDataAvailable(){
+        requestHealthKitAuthorization()
+    }
+}
+
+func requestHealthKitAuthorization() {
+    // Define the types of data you want to read
+    let typesToRead: Set<HKObjectType> = [HKObjectType.quantityType(forIdentifier: .height)!]
+    
+    // Request authorization from the user
+    healthStore.requestAuthorization(toShare: [], read: typesToRead) { (success, error) in
+        if success {
+            // User authorized access to health data
+        } else {
+            // Authorization failed or was denied by the user
+            if let error = error {
+                print("Authorization failed. Error: \(error.localizedDescription)")
+            }
+        }
     }
 }
 
