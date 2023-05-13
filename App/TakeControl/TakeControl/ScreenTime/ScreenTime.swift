@@ -38,9 +38,25 @@ struct ScreenTime_Previews: PreviewProvider {
 
 func initScreenTimeAPI() async {
     let center = AuthorizationCenter.shared
+    
     do {
         try await center.requestAuthorization(for: .individual)
     } catch {
         print("Failed to init screenTime API \(error)")
+    }
+    
+    _ = AuthorizationCenter.shared.$authorizationStatus
+        .sink() {_ in
+        switch AuthorizationCenter.shared.authorizationStatus {
+        case .notDetermined:
+            print("not determined")
+        case .denied:
+            print("denied")
+        case .approved:
+            print("approved")
+        @unknown default:
+            print("neki")
+            break
+        }
     }
 }
