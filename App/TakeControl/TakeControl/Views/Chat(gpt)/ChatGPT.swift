@@ -23,6 +23,10 @@ struct ChatGPT_Previews: PreviewProvider {
     }
 }
 
+struct APIRequest: Codable {
+    let model: String
+}
+
 struct ChatGPTAPI{
     func startConvo(){
         // Create a URL object with the endpoint you want to call
@@ -38,11 +42,18 @@ struct ChatGPTAPI{
         request.httpMethod = "POST"
 
 //        // Optional: Set request headers if required
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("Bearer " + Secrets.apiToken, forHTTPHeaderField: "Authorization")
 
         // Optional: Set request body for POST requests
         // request.httpBody = ...
+        let requestBody = APIRequest(model: "gpt-3.5-turbo")
+        // Convert the request structure to JSON data
+        guard let jsonData = try? JSONEncoder().encode(requestBody) else {
+            print("Failed to encode API request")
+            return
+        }
+        request.httpBody = jsonData
 
         // Create a URLSession object
         let session = URLSession.shared
