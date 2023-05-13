@@ -9,15 +9,22 @@ import SwiftUI
 import FamilyControls
 
 struct ScreenTime: View {
+    @StateObject var model = Model.shared
+    @State var isPresented = false
+    
     var body: some View {
         VStack{
             Text("ScreenTime")
             Button("Init ScreenTime API") {
                 Task { await initScreenTimeAPI() }
             }
-//            Button("API request"){
-//                queryActivitySummary(startDate: Date.now, endDate: Date.now);
-//            }
+            Button("Select Apps to Discourage") {
+                isPresented = true
+            }
+            .familyActivityPicker(isPresented: $isPresented, selection: $model.selectionToDiscourage)
+            Button("Start Monitoring") {
+                model.initiateMonitoring()
+            }
             
         }
     }
