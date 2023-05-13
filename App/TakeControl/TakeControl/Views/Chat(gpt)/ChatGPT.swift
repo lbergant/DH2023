@@ -39,7 +39,7 @@ struct ChatGPTAPI{
 
 //        // Optional: Set request headers if required
 //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer YOUR_API_TOKEN", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer " + Secrets.apiToken, forHTTPHeaderField: "Authorization")
 
         // Optional: Set request body for POST requests
         // request.httpBody = ...

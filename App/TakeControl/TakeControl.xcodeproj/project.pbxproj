@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1990B202A10526B00F83375 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1990B1F2A10526B00F83375 /* Secrets.swift */; };
 		A1DBCD112A0FB16A0052A592 /* TakeControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */; };
 		A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD122A0FB16A0052A592 /* ContentView.swift */; };
 		A1DBCD152A0FB16B0052A592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DBCD142A0FB16B0052A592 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1990B1F2A10526B00F83375 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A1DBCD0D2A0FB16A0052A592 /* TakeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlApp.swift; sourceTree = "<group>"; };
 		A1DBCD122A0FB16A0052A592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				EC35027B2A104D54007F4DEF /* ChatGPT.swift */,
+				A1990B1F2A10526B00F83375 /* Secrets.swift */,
 			);
 			path = "Chat(gpt)";
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1DBCD1A2A0FB16B0052A592 /* Persistence.swift in Sources */,
+				A1990B202A10526B00F83375 /* Secrets.swift in Sources */,
 				A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */,
 				A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */,
 				ECAB7FAC2A103FB5009315D8 /* ScreenTime.swift in Sources */,
