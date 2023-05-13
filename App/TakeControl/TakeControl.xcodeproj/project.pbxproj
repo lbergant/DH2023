@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1DBCD112A0FB16A0052A592 /* TakeControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */; };
+		A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD122A0FB16A0052A592 /* ContentView.swift */; };
+		A1DBCD152A0FB16B0052A592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DBCD142A0FB16B0052A592 /* Assets.xcassets */; };
+		A1DBCD182A0FB16B0052A592 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DBCD172A0FB16B0052A592 /* Preview Assets.xcassets */; };
+		A1DBCD1A2A0FB16B0052A592 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD192A0FB16B0052A592 /* Persistence.swift */; };
+		A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD1B2A0FB16B0052A592 /* TakeControl.xcdatamodeld */; };
+		A1DBCD272A0FB16C0052A592 /* TakeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD262A0FB16C0052A592 /* TakeControlTests.swift */; };
+		A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */; };
+		A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1DBCD232A0FB16C0052A592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1DBCD052A0FB16A0052A592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1DBCD0C2A0FB16A0052A592;
+			remoteInfo = TakeControl;
+		};
+		A1DBCD2D2A0FB16C0052A592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1DBCD052A0FB16A0052A592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1DBCD0C2A0FB16A0052A592;
+			remoteInfo = TakeControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A1DBCD0D2A0FB16A0052A592 /* TakeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlApp.swift; sourceTree = "<group>"; };
+		A1DBCD122A0FB16A0052A592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1DBCD142A0FB16B0052A592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1DBCD172A0FB16B0052A592 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1DBCD192A0FB16B0052A592 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A1DBCD1C2A0FB16B0052A592 /* TakeControl.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TakeControl.xcdatamodel; sourceTree = "<group>"; };
+		A1DBCD222A0FB16C0052A592 /* TakeControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DBCD262A0FB16C0052A592 /* TakeControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlTests.swift; sourceTree = "<group>"; };
+		A1DBCD2C2A0FB16C0052A592 /* TakeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITests.swift; sourceTree = "<group>"; };
+		A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1DBCD0A2A0FB16A0052A592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1DBCD1F2A0FB16C0052A592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1DBCD292A0FB16C0052A592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1DBCD042A0FB16A0052A592 = {
+			isa = PBXGroup;
+			children = (
+				A1DBCD0F2A0FB16A0052A592 /* TakeControl */,
+				A1DBCD252A0FB16C0052A592 /* TakeControlTests */,
+				A1DBCD2F2A0FB16C0052A592 /* TakeControlUITests */,
+				A1DBCD0E2A0FB16A0052A592 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1DBCD0E2A0FB16A0052A592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1DBCD0D2A0FB16A0052A592 /* TakeControl.app */,
+				A1DBCD222A0FB16C0052A592 /* TakeControlTests.xctest */,
+				A1DBCD2C2A0FB16C0052A592 /* TakeControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1DBCD0F2A0FB16A0052A592 /* TakeControl */ = {
+			isa = PBXGroup;
+			children = (
+				A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */,
+				A1DBCD122A0FB16A0052A592 /* ContentView.swift */,
+				A1DBCD142A0FB16B0052A592 /* Assets.xcassets */,
+				A1DBCD192A0FB16B0052A592 /* Persistence.swift */,
+				A1DBCD1B2A0FB16B0052A592 /* TakeControl.xcdatamodeld */,
+				A1DBCD162A0FB16B0052A592 /* Preview Content */,
+			);
+			path = TakeControl;
+			sourceTree = "<group>";
+		};
+		A1DBCD162A0FB16B0052A592 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A1DBCD172A0FB16B0052A592 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1DBCD252A0FB16C0052A592 /* TakeControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1DBCD262A0FB16C0052A592 /* TakeControlTests.swift */,
+			);
+			path = TakeControlTests;
+			sourceTree = "<group>";
+		};
+		A1DBCD2F2A0FB16C0052A592 /* TakeControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */,
+				A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */,
+			);
+			path = TakeControlUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1DBCD0C2A0FB16A0052A592 /* TakeControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1DBCD362A0FB16C0052A592 /* Build configuration list for PBXNativeTarget "TakeControl" */;
+			buildPhases = (
+				A1DBCD092A0FB16A0052A592 /* Sources */,
+				A1DBCD0A2A0FB16A0052A592 /* Frameworks */,
+				A1DBCD0B2A0FB16A0052A592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TakeControl;
+			productName = TakeControl;
+			productReference = A1DBCD0D2A0FB16A0052A592 /* TakeControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A1DBCD212A0FB16C0052A592 /* TakeControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1DBCD392A0FB16C0052A592 /* Build configuration list for PBXNativeTarget "TakeControlTests" */;
+			buildPhases = (
+				A1DBCD1E2A0FB16C0052A592 /* Sources */,
+				A1DBCD1F2A0FB16C0052A592 /* Frameworks */,
+				A1DBCD202A0FB16C0052A592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1DBCD242A0FB16C0052A592 /* PBXTargetDependency */,
+			);
+			name = TakeControlTests;
+			productName = TakeControlTests;
+			productReference = A1DBCD222A0FB16C0052A592 /* TakeControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A1DBCD2B2A0FB16C0052A592 /* TakeControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1DBCD3C2A0FB16C0052A592 /* Build configuration list for PBXNativeTarget "TakeControlUITests" */;
+			buildPhases = (
+				A1DBCD282A0FB16C0052A592 /* Sources */,
+				A1DBCD292A0FB16C0052A592 /* Frameworks */,
+				A1DBCD2A2A0FB16C0052A592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A1DBCD2E2A0FB16C0052A592 /* PBXTargetDependency */,
+			);
+			name = TakeControlUITests;
+			productName = TakeControlUITests;
+			productReference = A1DBCD2C2A0FB16C0052A592 /* TakeControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1DBCD052A0FB16A0052A592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A1DBCD0C2A0FB16A0052A592 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					A1DBCD212A0FB16C0052A592 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = A1DBCD0C2A0FB16A0052A592;
+					};
+					A1DBCD2B2A0FB16C0052A592 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = A1DBCD0C2A0FB16A0052A592;
+					};
+				};
+			};
+			buildConfigurationList = A1DBCD082A0FB16A0052A592 /* Build configuration list for PBXProject "TakeControl" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1DBCD042A0FB16A0052A592;
+			productRefGroup = A1DBCD0E2A0FB16A0052A592 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1DBCD0C2A0FB16A0052A592 /* TakeControl */,
+				A1DBCD212A0FB16C0052A592 /* TakeControlTests */,
+				A1DBCD2B2A0FB16C0052A592 /* TakeControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1DBCD0B2A0FB16A0052A592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1DBCD182A0FB16B0052A592 /* Preview Assets.xcassets in Resources */,
+				A1DBCD152A0FB16B0052A592 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1DBCD202A0FB16C0052A592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1DBCD2A2A0FB16C0052A592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1DBCD092A0FB16A0052A592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1DBCD1A2A0FB16B0052A592 /* Persistence.swift in Sources */,
+				A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */,
+				A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */,
+				A1DBCD112A0FB16A0052A592 /* TakeControlApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1DBCD1E2A0FB16C0052A592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1DBCD272A0FB16C0052A592 /* TakeControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1DBCD282A0FB16C0052A592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */,
+				A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1DBCD242A0FB16C0052A592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1DBCD0C2A0FB16A0052A592 /* TakeControl */;
+			targetProxy = A1DBCD232A0FB16C0052A592 /* PBXContainerItemProxy */;
+		};
+		A1DBCD2E2A0FB16C0052A592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1DBCD0C2A0FB16A0052A592 /* TakeControl */;
+			targetProxy = A1DBCD2D2A0FB16C0052A592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A1DBCD342A0FB16C0052A592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1DBCD352A0FB16C0052A592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1DBCD372A0FB16C0052A592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TakeControl/Preview Content\"";
+				DEVELOPMENT_TEAM = 5GM578Q7D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpaca.TakeControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1DBCD382A0FB16C0052A592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TakeControl/Preview Content\"";
+				DEVELOPMENT_TEAM = 5GM578Q7D9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpaca.TakeControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A1DBCD3A2A0FB16C0052A592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GM578Q7D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpaca.TakeControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakeControl";
+			};
+			name = Debug;
+		};
+		A1DBCD3B2A0FB16C0052A592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GM578Q7D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpaca.TakeControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeControl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakeControl";
+			};
+			name = Release;
+		};
+		A1DBCD3D2A0FB16C0052A592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GM578Q7D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpaca.TakeControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TakeControl;
+			};
+			name = Debug;
+		};
+		A1DBCD3E2A0FB16C0052A592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5GM578Q7D9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpaca.TakeControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TakeControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1DBCD082A0FB16A0052A592 /* Build configuration list for PBXProject "TakeControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1DBCD342A0FB16C0052A592 /* Debug */,
+				A1DBCD352A0FB16C0052A592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1DBCD362A0FB16C0052A592 /* Build configuration list for PBXNativeTarget "TakeControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1DBCD372A0FB16C0052A592 /* Debug */,
+				A1DBCD382A0FB16C0052A592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1DBCD392A0FB16C0052A592 /* Build configuration list for PBXNativeTarget "TakeControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1DBCD3A2A0FB16C0052A592 /* Debug */,
+				A1DBCD3B2A0FB16C0052A592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1DBCD3C2A0FB16C0052A592 /* Build configuration list for PBXNativeTarget "TakeControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1DBCD3D2A0FB16C0052A592 /* Debug */,
+				A1DBCD3E2A0FB16C0052A592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A1DBCD1B2A0FB16B0052A592 /* TakeControl.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1DBCD1C2A0FB16B0052A592 /* TakeControl.xcdatamodel */,
+			);
+			currentVersion = A1DBCD1C2A0FB16B0052A592 /* TakeControl.xcdatamodel */;
+			path = TakeControl.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A1DBCD052A0FB16A0052A592 /* Project object */;
+}
