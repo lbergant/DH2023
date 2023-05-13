@@ -23,7 +23,7 @@ struct Health: View {
                 ha.initHealthAPI()
             }
             Button("API request"){
-//                ha.queryActivitySummary();
+                ha.queryActivitySummary();
                 ha.readStepsTakenToday { (steps, error) in
                     if let error = error {
                         print("Error retrieving steps taken: \(error.localizedDescription)")
@@ -32,6 +32,7 @@ struct Health: View {
 
                     if let steps = steps {
                         print("Steps taken today: \(steps)")
+                        result = result + "Steps: \(steps) "
                     } else {
                         print("Steps data not available for today.")
                     }
@@ -45,8 +46,10 @@ struct Health: View {
                     
                     if let steps = steps {
                         print("Steps goal: \(steps)")
+                        result += "Goal: \(steps)"
                     } else {
                         print("Steps data goal not available for today.")
+                        result = result + "/5000"
                     }
                 }
             }
@@ -68,9 +71,9 @@ struct HealthAPI{
     
     func handleAPIAuthorization(status : Bool){
         if status{
-            buttonText = "OK"
+            buttonText = "OK "
         }else{
-            buttonText = "NOK"
+            buttonText = "NOK "
         }
     }
     
@@ -103,7 +106,7 @@ struct HealthAPI{
         var endDateCom = calendar.dateComponents([.year, .month, .day], from: endDate)
                 endDateCom.calendar = calendar
         
-        guard let startDate = calendar.date(byAdding: .day, value: -365, to: endDate) else {
+        guard let startDate = calendar.date(byAdding: .day, value: -7, to: endDate) else {
             fatalError("*** Unable to create the start date ***")
         }
         var startDateCom = calendar.dateComponents([.year, .month, .day], from:startDate)
@@ -132,9 +135,11 @@ struct HealthAPI{
                 //                    summary.dateComponents(for: calendar).date
                 
                 print("Active Energy Burned: \(summary.activeEnergyBurned.doubleValue(for: .kilocalorie())) kcal")
+                buttonText = buttonText + "Cal:\(summary.activeEnergyBurned.doubleValue(for: .kilocalorie()))"
 //                print("Exercise Time: \(summary.appleExerciseTime.doubleValue(for: .minute())) mins")
 //                print("Stand Hours: \(summary.appleStandHours.doubleValue(for: .count())) hours")
-                print("Energy Goal: \(summary.activeEnergyBurnedGoal.doubleValue(for: .count())) kcal")
+                print("Energy Goal: \(summary.activeEnergyBurnedGoal.doubleValue(for: .kilocalorie())) kcal")
+                buttonText = buttonText + "/\(summary.activeEnergyBurnedGoal.doubleValue(for: .kilocalorie()))"
                 //            print("Flights Climbed: \(summary.flightsClimbed.doubleValue(for: .count())) flights")
 //                print("Step Count: \(summary.stepCount.doubleValue(for: .count())) steps")
                 //            print("Distance: \(summary.distance?.doubleValue(for: .meter()) ?? 0) meters")
