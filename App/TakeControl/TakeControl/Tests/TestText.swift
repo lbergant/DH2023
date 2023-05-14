@@ -8,28 +8,10 @@
 import SwiftUI
 
 struct TestText: View {
-    @State private var items = [1, 2, 3, 4, 5]
         
         var body: some View {
-            VStack {
-                ScrollView {
-                    ScrollViewReader { scrollView in
-                        ForEach(items, id: \.self) { item in
-                            Text("Item \(item)")
-                                .padding()
-                                .id(item)
-                        }
-                        .onChange(of: items) { newValue in
-                            scrollView.scrollTo(newValue.last, anchor: .bottom)
-                        }
-                    }
-                }
-                
-                Button("Add Item") {
-                    items.append(items.count + 1)
-                }
-                .padding()
-            }
+            
+            Image(systemName: "chevron.right")
         }
 }
 

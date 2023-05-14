@@ -10,4 +10,5 @@ import SwiftUI
 enum Cons {
     static let backgrondColor = "BackgroundColor"
     static let shadowColor = "ShadowColor"
+    static let blue = "BlueColor"
 }

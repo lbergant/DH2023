@@ -19,7 +19,7 @@ struct EditGroupView: View {
                     Circle()
                         .foregroundColor(Color.white)
                         .customShadow()
-                        .overlay(Text("choosen\nimage"))
+                        .overlay(Image(systemName: "doc.text").resizable().frame(width: 37, height: 47).foregroundColor(Color(Cons.blue)))
                     
                     Spacer(minLength: 30)
                     
@@ -29,7 +29,7 @@ struct EditGroupView: View {
                             .customShadow()
                             .frame(height: 45)
                         
-                        Text("News")
+                        Text("News app")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.leading)
                     }
@@ -66,7 +66,7 @@ struct EditGroupView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.all)
 
-                            Button("30 Min   "){}
+                            Button("0 Min    "){}
                                 .padding(.all)
                         }
                     }

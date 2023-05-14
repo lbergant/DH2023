@@ -1,10 +1,3 @@
-//
-//  EditView.swift
-//  TakeControl
-//
-//  Created by Blaž Bergant on 13/05/2023.
-//
-
 import SwiftUI
 
 struct EditView: View {
@@ -12,58 +5,89 @@ struct EditView: View {
     let groups = ["News"]
 
     var body: some View {
-        ScrollView{
-            VStack {
-                RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
-                    .frame(height: 230)
-                    .padding(.horizontal, 30)
-                    .padding(.top, 20)
-                    .customShadow()
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
-                        .edgesIgnoringSafeArea(.bottom)
-                    
-                    LazyVStack {
-                        ForEach(groups, id: \.self) { group in
-                            NavigationLink(destination: EditGroupView()) {
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .frame(height: 60)
-                                        .padding(.all)
-                                    HStack {
-                                        Circle()
-                                            .frame(height: 50)
-                                            .foregroundColor(Color.white)
-                                            .overlay(Text("img"))
-                                        
+        NavigationView {
+            ZStack {
+                Color(Cons.backgrondColor).edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    VStack {
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
+                                .frame(height: 230)
+                                
+                                .customShadow()
+                            VStack {
+                                Text("Stats:")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .font(.title2) // or .headline, depending on the look you want
+                                    .bold()
+                                    .padding(.horizontal)
+                                    
+                                
+                                Spacer()
+                            }
+                            .padding(.top)
+
+                        }
+                        .padding(.horizontal, 30)
+                        .padding(.top, 90)
+                        
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
+                                .edgesIgnoringSafeArea(.bottom)
+                            
+                            VStack {
+                                Text("App limits:")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .font(.title2) // or .headline, depending on the look you want
+                                    .bold()
+                                    .padding(.horizontal)
+                                    .padding(.top)
+
+                                ForEach(groups, id: \.self) { group in
+                                    NavigationLink(destination: EditGroupView()) {
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 15)
-                                                .foregroundColor(Color.white)
-                                            
-                                            Text("llala")
-                                                .frame(maxWidth: .infinity, alignment: .leading)
-                                                .padding(.leading)
+                                            HStack {
+                                                Circle()
+                                                    .foregroundColor(Color.white)
+                                                    .overlay(Image(systemName: "doc.text").foregroundColor(Color.black))
+                                                
+                                                ZStack {
+                                                    RoundedRectangle(cornerRadius: 15)
+                                                        .foregroundColor(Color.white)
+                                                    
+                                                    Text("News app")
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                                        .padding(.leading)
+                                                        .foregroundColor(Color.black)
+                                                }
+                                                Image(systemName: "chevron.right").foregroundColor(Color.white)
+
+                                            }
+                                            .padding(.all)
                                         }
-                                        .padding(.all, 8)
+                                            .frame(height: 80)
+                                            .padding(.horizontal)
+
                                     }
-                                    
-                                    .padding([.horizontal, .top])
                                 }
+                                Spacer()
                             }
+                            .padding(.bottom)
+                            .frame(height: .infinity)
                         }
+                        .frame(height: 800)
+                        .padding(.horizontal, 30)
+                        .padding(.top, 20)
+                        .customShadow()
+                        .edgesIgnoringSafeArea(.bottom)
                     }
                     .padding(.bottom)
-                        
-
                 }
-                .frame(height: 800)
-                .padding(.all, 30)
-                .customShadow()
-                .edgesIgnoringSafeArea(.bottom)
+                .edgesIgnoringSafeArea(.top)
             }
         }
-
     }
 }
 
