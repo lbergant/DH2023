@@ -8,57 +8,29 @@
 import SwiftUI
 
 struct TestText: View {
-    @State private var messages: [Message] = [Message(text: "yes", isCurrentUser: true),
-                                              Message(text: "no", isCurrentUser: false)]
-    @State private var currentMessage = ""
-
-    var body: some View {
-        VStack {
-            List {
-                ForEach(messages) { message in
-                    HStack {
-                        if message.isCurrentUser {
-                            Spacer()
-                            Text(message.text)
+    @State private var items = [1, 2, 3, 4, 5]
+        
+        var body: some View {
+            VStack {
+                ScrollView {
+                    ScrollViewReader { scrollView in
+                        ForEach(items, id: \.self) { item in
+                            Text("Item \(item)")
                                 .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        } else {
-                            Text(message.text)
-                                .padding()
-                                .background(Color.gray)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                            Spacer()
+                                .id(item)
+                        }
+                        .onChange(of: items) { newValue in
+                            scrollView.scrollTo(newValue.last, anchor: .bottom)
                         }
                     }
                 }
-            }
-
-            HStack {
-                TextField("Type your message here...", text: $currentMessage)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(minHeight: CGFloat(30))
                 
-                Button(action: {
-                    messages.append(Message(text: currentMessage, isCurrentUser: true))
-                    currentMessage = ""
-                }) {
-                    Image(systemName: "arrow.up.circle.fill")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 24, height: 24)
+                Button("Add Item") {
+                    items.append(items.count + 1)
                 }
-                .padding(10)
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .clipShape(Circle())
-
+                .padding()
             }
-            .padding()
         }
-    }
 }
 
 
@@ -70,3 +42,28 @@ struct TestText_Previews: PreviewProvider {
         TestText()
     }
 }
+
+
+
+//List {
+//    ForEach(responsesOut) { message in
+//        HStack {
+//            if message.isCurrentUser {
+//                    Spacer()
+//                    Text(message.text)
+//                        .padding()
+//                        .background(Color.blue)
+//                        .foregroundColor(.white)
+//                        .cornerRadius(20)
+//            } else {
+//                Text(message.text)
+//                    .padding()
+//                    .background(Color.gray)
+//                    .foregroundColor(.white)
+//                    .cornerRadius(20)
+//                Spacer()
+//            }
+//        }
+//    }
+//}
+//.listStyle(PlainListStyle())
