@@ -156,6 +156,22 @@ struct GoalsView: View {
             }
         }
     }
+    
+    func getYear() -> String {
+            return self.year
+        }
+
+        func getQuarter() -> String {
+            return self.quarter
+        }
+
+        func getMonth() -> String {
+            return self.month
+        }
+
+        func getWeek() -> String {
+            return self.week
+        }
 }
 
 
