@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1990B202A10526B00F83375 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1990B1F2A10526B00F83375 /* Secrets.swift */; };
 		A1DBCD112A0FB16A0052A592 /* TakeControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */; };
 		A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD122A0FB16A0052A592 /* ContentView.swift */; };
 		A1DBCD152A0FB16B0052A592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DBCD142A0FB16B0052A592 /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		A1DBCD272A0FB16C0052A592 /* TakeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD262A0FB16C0052A592 /* TakeControlTests.swift */; };
 		A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */; };
 		A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */; };
+		D061B53C2A10A5F800C7FA74 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061B53B2A10A5F800C7FA74 /* Secrets.swift */; };
 		EC35027C2A104D54007F4DEF /* ChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027B2A104D54007F4DEF /* ChatGPT.swift */; };
 		EC35027E2A1056B2007F4DEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027D2A1056B2007F4DEF /* Constants.swift */; };
 		EC3502802A105E3E007F4DEF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027F2A105E3E007F4DEF /* ChatView.swift */; };
@@ -50,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A1990B1F2A10526B00F83375 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A1DBCD0D2A0FB16A0052A592 /* TakeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlApp.swift; sourceTree = "<group>"; };
 		A1DBCD122A0FB16A0052A592 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		A1DBCD2C2A0FB16C0052A592 /* TakeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITests.swift; sourceTree = "<group>"; };
 		A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D061B53B2A10A5F800C7FA74 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		EC35027B2A104D54007F4DEF /* ChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT.swift; sourceTree = "<group>"; };
 		EC35027D2A1056B2007F4DEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC35027F2A105E3E007F4DEF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			children = (
 				EC35027B2A104D54007F4DEF /* ChatGPT.swift */,
 				EC35027F2A105E3E007F4DEF /* ChatView.swift */,
-				A1990B1F2A10526B00F83375 /* Secrets.swift */,
+				D061B53B2A10A5F800C7FA74 /* Secrets.swift */,
 			);
 			path = "Chat(gpt)";
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1DBCD1A2A0FB16B0052A592 /* Persistence.swift in Sources */,
-				A1990B202A10526B00F83375 /* Secrets.swift in Sources */,
+				D061B53C2A10A5F800C7FA74 /* Secrets.swift in Sources */,
 				A1DBCD132A0FB16A0052A592 /* ContentView.swift in Sources */,
 				A1DBCD1D2A0FB16B0052A592 /* TakeControl.xcdatamodeld in Sources */,
 				ECAB7FAC2A103FB5009315D8 /* ScreenTime.swift in Sources */,

@@ -53,6 +53,10 @@ class Model: ObservableObject {
         store.gameCenter.denyMultiplayerGaming = true
         store.media.denyMusicService = false
     }
+    
+    func stopMonitoring() {
+        selectionToDiscourage = FamilyActivitySelection()
+    }
 }
 
 extension DeviceActivityName {
