@@ -67,3 +67,35 @@ struct TestText_Previews: PreviewProvider {
 //    }
 //}
 //.listStyle(PlainListStyle())
+
+
+//let groups = ["News"]
+//
+//var body: some View {
+//    NavigationView {
+//        List(groups, id: \.self) { group in
+//            NavigationLink(destination: EditGroupView()) {
+//                HStack {
+//                    Circle()
+//                        .frame(height: 50)
+//                        .foregroundColor(Color.white)
+//                        .customShadow()
+//                        .overlay(Text("img"))
+//                    
+//                    ZStack{
+//                        RoundedRectangle(cornerRadius: 15)
+//                            .foregroundColor(Color.white)
+//                            .customShadow()
+//                        Text("llala")
+//                            .frame(maxWidth: .infinity, alignment: .leading)
+//                            .padding(.leading)
+//                            
+//                        
+//                    }
+//                    .padding(.all, 8)
+//                }
+//            }
+//        }
+//        .listStyle(SidebarListStyle())
+//    }
+//}

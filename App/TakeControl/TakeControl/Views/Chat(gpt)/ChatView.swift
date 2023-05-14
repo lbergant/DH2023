@@ -40,6 +40,7 @@ struct ChatView: View {
     
         
         ZStack {
+            Color(Cons.backgrondColor).edgesIgnoringSafeArea(.all)
             ScrollView {
                 ScrollViewReader { scrollView in
                     ForEach(responsesOut) { message in
@@ -66,29 +67,8 @@ struct ChatView: View {
                     }
                 }
             }
-            
-            List {
-                ForEach(responsesOut) { message in
-                    HStack {
-                        if message.isCurrentUser {
-                                Spacer()
-                                Text(message.text)
-                                    .padding()
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(20)
-                        } else {
-                            Text(message.text)
-                                .padding()
-                                .background(Color.gray)
-                                .foregroundColor(.white)
-                                .cornerRadius(20)
-                            Spacer()
-                        }
-                    }
-                }
-            }
-            .listStyle(PlainListStyle())
+            .padding(.horizontal ,30)
+            .padding(.top, 40)
 
             VStack {
                 Spacer()
@@ -103,7 +83,7 @@ struct ChatView: View {
                             .textFieldStyle(DefaultTextFieldStyle())
                             .frame(minHeight: CGFloat(30))
                             .padding(.all)
-                    }
+                    }.padding(.leading, 18)
                     
                     
                     Button(action: {
@@ -116,6 +96,7 @@ struct ChatView: View {
                         
                         
                         cgpt.stepConvo(userPrompt: currentMessage, first:false)
+                        currentMessage = ""
                     }) {
                         Image(systemName: "arrow.up.circle.fill")
                             .resizable()

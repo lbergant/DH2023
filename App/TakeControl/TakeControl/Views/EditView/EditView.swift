@@ -12,32 +12,58 @@ struct EditView: View {
     let groups = ["News"]
 
     var body: some View {
-        NavigationView {
-            List(groups, id: \.self) { group in
-                NavigationLink(destination: EditGroupView()) {
-                    HStack {
-                        Circle()
-                            .frame(height: 50)
-                            .foregroundColor(Color.white)
-                            .customShadow()
-                            .overlay(Text("img"))
-                        
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 15)
-                                .foregroundColor(Color.white)
-                                .customShadow()
-                            Text("llala")
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.leading)
-                                
-                            
+        ScrollView{
+            VStack {
+                RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
+                    .frame(height: 230)
+                    .padding(.horizontal, 30)
+                    .padding(.top, 20)
+                    .customShadow()
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
+                        .edgesIgnoringSafeArea(.bottom)
+                    
+                    LazyVStack {
+                        ForEach(groups, id: \.self) { group in
+                            NavigationLink(destination: EditGroupView()) {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .frame(height: 60)
+                                        .padding(.all)
+                                    HStack {
+                                        Circle()
+                                            .frame(height: 50)
+                                            .foregroundColor(Color.white)
+                                            .overlay(Text("img"))
+                                        
+                                        ZStack {
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .foregroundColor(Color.white)
+                                            
+                                            Text("llala")
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .padding(.leading)
+                                        }
+                                        .padding(.all, 8)
+                                    }
+                                    
+                                    .padding([.horizontal, .top])
+                                }
+                            }
                         }
-                        .padding(.all, 8)
                     }
+                    .padding(.bottom)
+                        
+
                 }
+                .frame(height: 800)
+                .padding(.all, 30)
+                .customShadow()
+                .edgesIgnoringSafeArea(.bottom)
             }
-            .listStyle(SidebarListStyle())
         }
+
     }
 }
 

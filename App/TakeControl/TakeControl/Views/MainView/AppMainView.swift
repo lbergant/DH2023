@@ -24,12 +24,19 @@ struct AppMainView: View {
                     Text("Edit")
                 }
                 .tag(1)
+            ChatView()
+                .tabItem {
+                    Image(systemName: "message")
+                    Text("Message")
+                }
+                .tag(2)
             SettingsView()
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text("Settings")
                 }
-                .tag(2)
+                .tag(3)
+            
         }
         .background(Color.black)
     }
