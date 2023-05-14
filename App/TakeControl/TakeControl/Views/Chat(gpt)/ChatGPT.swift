@@ -10,20 +10,21 @@ import SwiftUI
 struct ChatGPT: View {
 //    @State var lastResponse = ""
     @State var responses : [Message] = []
+    @State var responsesOut : [Message] = []
     @State var isAllowed : Int = -1
     
     var body: some View {
-        let cgpt = ChatGPTAPI.init(responses: $responses, isAllowed: $isAllowed)
+        let cgpt = ChatGPTAPI.init(responses: $responses,  responsesOut: $responsesOut, isAllowed: $isAllowed)
         Text(String("Allowed for : \(isAllowed)"))
         Button("Init conversation") {
             isAllowed = -1
             let userPrompt = "Today's weather is sunny with a temperature of 22 degrees Celsius and Blaz has walked a total of 5,000 steps. Blaz has used up his allocated screen time for Instagram today. He will try to convince you why you should allow him to use more screen time. You should decide whether he can or can not get more time. Be semi harsh when deciding, but grant him additional time if you sense real urgency in his message such as school and so on OR that he has done a lot of productive work throughout the day. Also make sure to Start the conversation with 'I allow you additional X minutes'... if you decide to grant user more time OR 'I do not allow you'... if you decide not to grant more time for the user! This is a very important rule! Do not make your response longer than 40 words! Here are some examples below for you to help you with knowing how to respond(these examples are not the current examples): 1.user: I deserve more screen time because I've cleaned my room. GPT: Cleaning your room is good, Jure, but it doesn't directly relate to the weather or your physical activity. Try to do something that aligns with these factors to earn more screen time. 2. user: I had a one hour walk today and I've cleaned my room. GPT: That's great, Jure! A one hour walk is a good start, especially considering the pleasant weather. Can you tell me more about your day? Maybe there's something else you've done that could earn you more screen time. 3. user: I cleaned my room, had a one-hour walk, and studied for 3 hours. GPT: Excellent work, Jure! You've been quite productive and active today. Given these factors, I'm granting you an additional 30 minutes of screen time on Instagram. Remember, balance is key! This prompt is only an instruction for you to know what is the case and what is your task. The next prompt will be already be written by the user trying to convince you. If you now understand the rules, just respond by \"i understand\" and wait for next prompts.DONT FORGET THAT YOUR ANSWERS SHOULD BE FUNNY!"
-            cgpt.stepConvo(userPrompt : userPrompt)
+            cgpt.stepConvo(userPrompt : userPrompt,first:  true)
         }
         Button("Step conversation") {
             isAllowed = -1
             let userPrompt = "Can I use my favourite app for 15 minutes"
-            cgpt.stepConvo(userPrompt : userPrompt)
+            cgpt.stepConvo(userPrompt : userPrompt, first: false)
         }
     }
 }
@@ -46,6 +47,7 @@ struct GPTConvo: Codable{
 
 struct ChatGPTAPI{
     @Binding var responses : [Message]
+    @Binding var responsesOut : [Message]
     @Binding var isAllowed : Int
     
     func responses2JSON(responses : [Message])->[GPTConvo]{
@@ -63,17 +65,23 @@ struct ChatGPTAPI{
         
         return result
     }
+
     
-    func stepConvo(userPrompt : String){
+    func stepConvo(userPrompt : String, first : Bool){
         // Create a URL object with the endpoint you want to call
         guard let url = URL(string: "https://openai-api.meetings.bio/api/openai/chat/completions") else {
             print("Invalid URL")
             return
         }
+        
+        //let prompt = "Don't forget to answer me in a funny or sarcastic way. " + userPrompt
+        let prompt = userPrompt
 
         // Append user prompts
-        responses.append(Message.init(text: userPrompt, isCurrentUser: true))
-        
+        responses.append(Message.init(text: prompt, isCurrentUser: true))
+        if !first{
+            responsesOut.append(Message.init(text: prompt, isCurrentUser: true))
+        }
         
         // Create a URLRequest object with the URL
         var request = URLRequest(url: url)
@@ -87,7 +95,7 @@ struct ChatGPTAPI{
 
         // Optional: Set request body for POST requests
         // request.httpBody = ...
-        let requestBody = APIRequest(model: "gpt-3.5-turbo", messages: responses2JSON(responses: responses))
+        let requestBody = APIRequest(model: "gpt-4", messages: responses2JSON(responses: responses))
         // Convert the request structure to JSON data
         guard let jsonData = try? JSONEncoder().encode(requestBody) else {
             print("Failed to encode API request")
@@ -112,9 +120,29 @@ struct ChatGPTAPI{
             
             // Process the response data
             if let data = data {
-                let responseString = String(data: data, encoding: .utf8) ?? ""
+                var responseString = String(data: data, encoding: .utf8) ?? ""
+                
                 print("Response: \(responseString)")
                 responses.append(Message.init(text: responseString, isCurrentUser: false))
+                
+                if !first{
+                    let jsonData = Data(responseString.utf8)
+                    
+                    do {
+                        if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any],
+                           let choices = jsonObject["choices"] as? [[String: Any]],
+                           let firstChoice = choices.first,
+                           let message = firstChoice["message"] as? [String: Any],
+                           let content = message["content"] as? String {
+                            responsesOut.append(Message(text: content, isCurrentUser: false))
+                        }
+                    } catch {
+                        print("Error parsing JSON: \(error)")
+                    }
+                }
+
+                
+                
                 checkAllowed(userPrompt: responseString)
                 // You can parse the response data here
             }

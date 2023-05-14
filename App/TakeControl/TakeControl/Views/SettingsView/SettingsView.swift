@@ -40,7 +40,8 @@ struct SettingsView: View {
                 .padding()
         }
         .sheet(isPresented: $showChatGPTView) {
-            ChatGPT()
+            //ChatGPT()
+            ChatView()
         }
     }
 }
