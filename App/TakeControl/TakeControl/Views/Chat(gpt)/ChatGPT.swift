@@ -7,12 +7,22 @@
 
 import SwiftUI
 
+struct Message: Identifiable {
+    let id = UUID()
+    let text: String
+    let isCurrentUser: Bool
+}
+
 struct ChatGPT: View {
+//    @State var lastResponse = ""
+    @State var responses : [Message] = []
+    
     var body: some View {
-        let cgpt = ChatGPTAPI()
+        var cgpt = ChatGPTAPI.init(responses: $responses)
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         Button("Start conversation") {
-            cgpt.startConvo()
+            let userPrompt = "Can i give up"
+            cgpt.stepConvo(userPrompt : userPrompt)
         }
     }
 }
@@ -25,16 +35,44 @@ struct ChatGPT_Previews: PreviewProvider {
 
 struct APIRequest: Codable {
     let model: String
+    let messages: [GPTConvo]
+}
+
+struct GPTConvo: Codable{
+    let role: String
+    let content: String
 }
 
 struct ChatGPTAPI{
-    func startConvo(){
+    @Binding var responses : [Message]
+    
+    func responses2JSON()->[GPTConvo]{
+        
+        var result : [GPTConvo] = []
+        for res in responses{
+            var user = ""
+            if res.isCurrentUser{
+                user = "user"
+            }else{
+                user = "assistant"
+            }
+            result.append(GPTConvo(role: user, content: res.text))
+        }
+        
+        return result
+    }
+    
+    func stepConvo(userPrompt : String){
         // Create a URL object with the endpoint you want to call
         guard let url = URL(string: "https://openai-api.meetings.bio/api/openai/chat/completions") else {
             print("Invalid URL")
             return
         }
 
+        // Append user prompts
+        responses.append(Message.init(text: userPrompt, isCurrentUser: true))
+        
+        
         // Create a URLRequest object with the URL
         var request = URLRequest(url: url)
 
@@ -47,7 +85,7 @@ struct ChatGPTAPI{
 
         // Optional: Set request body for POST requests
         // request.httpBody = ...
-        let requestBody = APIRequest(model: "gpt-3.5-turbo")
+        let requestBody = APIRequest(model: "gpt-3.5-turbo", messages: responses2JSON())
         // Convert the request structure to JSON data
         guard let jsonData = try? JSONEncoder().encode(requestBody) else {
             print("Failed to encode API request")
@@ -74,7 +112,7 @@ struct ChatGPTAPI{
             if let data = data {
                 let responseString = String(data: data, encoding: .utf8)
                 print("Response: \(responseString ?? "")")
-                
+                responses.append(Message.init(text: responseString ?? "", isCurrentUser: false))
                 // You can parse the response data here
             }
         }
