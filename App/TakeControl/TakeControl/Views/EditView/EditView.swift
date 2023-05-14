@@ -1,8 +1,22 @@
 import SwiftUI
+import SwiftUICharts
+
+struct RepresentableCircular: UIViewRepresentable {
+    let chart: Circular
+
+    func makeUIView(context: Context) -> Circular {
+        return chart
+    }
+
+    func updateUIView(_ uiView: Circular, context: Context) {
+    }
+}
+
 
 struct EditView: View {
 
     let groups = ["News"]
+    let chart = Circular(percentages: [42,58], colors: [.red, UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha:1)],aimationType: .animationFadeIn,showPercentageStyle: .none)
 
     var body: some View {
         NavigationView {
@@ -14,16 +28,21 @@ struct EditView: View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
                                 .frame(height: 230)
-                                
                                 .customShadow()
+                            
                             VStack {
-                                Text("Stats:")
+                                Text("Steps:")
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .font(.title2) // or .headline, depending on the look you want
                                     .bold()
                                     .padding(.horizontal)
-                                    
                                 
+                                RepresentableCircular(chart: chart)
+                                                                    .frame(width: 150, height: 150)
+                                
+                                Text("4800/10000")
+                                    .frame(maxWidth: .infinity)
+                                Spacer()
                                 Spacer()
                             }
                             .padding(.top)
@@ -74,6 +93,7 @@ struct EditView: View {
                                 }
                                 Spacer()
                             }
+                            .frame(height: .infinity)
                             .padding(.bottom)
                         }
                         .frame(height: 800)
