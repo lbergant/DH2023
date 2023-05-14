@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct EditGroupView: View {
+    @StateObject var model = Model.shared
+    @State var isPresented = false
     var body: some View {
-        @State var enteredText = "News"
+
         
         ZStack {
             Color(Cons.backgrondColor)
@@ -54,7 +56,10 @@ struct EditGroupView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.all)
                             
-                            Button("Edit      "){}
+                            Button("Edit      "){
+                                isPresented = true
+                            }
+                                .familyActivityPicker(isPresented: $isPresented, selection: $model.selectionToDiscourage)
                                 .padding(.all)
                         }
                         

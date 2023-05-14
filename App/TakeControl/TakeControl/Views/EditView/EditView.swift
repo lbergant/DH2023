@@ -86,7 +86,7 @@ struct EditView: View {
                                             }
                                             .padding(.all)
                                         }
-                                            .frame(height: 80)
+                                            .frame(height: 78)
                                             .padding(.horizontal)
 
                                     }
@@ -94,6 +94,7 @@ struct EditView: View {
                                 Spacer()
                             }
                             .frame(height: .infinity)
+                            .padding(.bottom)
                         }
                         .frame(height: 800)
                         .padding(.horizontal, 30)
