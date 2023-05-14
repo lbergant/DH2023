@@ -9,14 +9,35 @@ import SwiftUI
 
 struct EditView: View {
 
-    let groups = ["Group 1", "Group 2", "Group 3", "Group 4", "Group 5"]
+    let groups = ["News"]
 
     var body: some View {
-        List(groups, id: \.self) { group in
-            
-            Text(group)
+        NavigationView {
+            List(groups, id: \.self) { group in
+                NavigationLink(destination: EditGroupView()) {
+                    HStack {
+                        Circle()
+                            .frame(height: 50)
+                            .foregroundColor(Color.white)
+                            .customShadow()
+                            .overlay(Text("img"))
+                        
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 15)
+                                .foregroundColor(Color.white)
+                                .customShadow()
+                            Text("llala")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading)
+                                
+                            
+                        }
+                        .padding(.all, 8)
+                    }
+                }
+            }
+            .listStyle(SidebarListStyle())
         }
-        .listStyle(SidebarListStyle())
     }
 }
 

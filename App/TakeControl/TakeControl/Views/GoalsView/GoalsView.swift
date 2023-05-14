@@ -9,7 +9,32 @@ import SwiftUI
 
 struct GoalsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+            ZStack {
+                Color(Cons.backgrondColor)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text("This is the first view")
+                    NavigationLink(destination: SecondView()) {
+                        Text("Go to second view")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                }
+                .navigationTitle("First View")
+            }
+        }
+    }
+}
+
+struct SecondView: View {
+    var body: some View {
+        Text("This is the second view")
+            .navigationTitle("Second View")
     }
 }
 

@@ -17,6 +17,8 @@
 		A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */; };
 		A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */; };
 		EC35027C2A104D54007F4DEF /* ChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027B2A104D54007F4DEF /* ChatGPT.swift */; };
+		EC35027E2A1056B2007F4DEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027D2A1056B2007F4DEF /* Constants.swift */; };
+		EC3502802A105E3E007F4DEF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027F2A105E3E007F4DEF /* ChatView.swift */; };
 		EC72D1012A0FE9690007CE41 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D0FE2A0FE9690007CE41 /* Health.swift */; };
 		EC72D1032A0FF3E70007CE41 /* AppMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1022A0FF3E70007CE41 /* AppMainView.swift */; };
 		EC72D1072A0FF7960007CE41 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72D1062A0FF7960007CE41 /* SettingsView.swift */; };
@@ -60,6 +62,8 @@
 		A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITests.swift; sourceTree = "<group>"; };
 		A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC35027B2A104D54007F4DEF /* ChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT.swift; sourceTree = "<group>"; };
+		EC35027D2A1056B2007F4DEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC35027F2A105E3E007F4DEF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		EC72D0FE2A0FE9690007CE41 /* Health.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		EC72D1022A0FF3E70007CE41 /* AppMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMainView.swift; sourceTree = "<group>"; };
 		EC72D1062A0FF7960007CE41 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				EC35027B2A104D54007F4DEF /* ChatGPT.swift */,
+				EC35027F2A105E3E007F4DEF /* ChatView.swift */,
 			);
 			path = "Chat(gpt)";
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				ECAB7FA12A103EC9009315D8 /* ScreenTime */,
 				EC72D0FE2A0FE9690007CE41 /* Health.swift */,
 				A1DBCD192A0FB16B0052A592 /* Persistence.swift */,
+				EC35027D2A1056B2007F4DEF /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -385,10 +391,12 @@
 				EC72D1012A0FE9690007CE41 /* Health.swift in Sources */,
 				EC72D1152A10109D0007CE41 /* TestText.swift in Sources */,
 				ECAB7FAB2A103FB5009315D8 /* ActivityMonitor.swift in Sources */,
+				EC35027E2A1056B2007F4DEF /* Constants.swift in Sources */,
 				EC72D1072A0FF7960007CE41 /* SettingsView.swift in Sources */,
 				ECAB7FAD2A103FB5009315D8 /* Model.swift in Sources */,
 				ECAB7FB52A1040F1009315D8 /* EditView.swift in Sources */,
 				EC72D1092A0FF7AB0007CE41 /* GoalsView.swift in Sources */,
+				EC3502802A105E3E007F4DEF /* ChatView.swift in Sources */,
 				EC72D1032A0FF3E70007CE41 /* AppMainView.swift in Sources */,
 				EC35027C2A104D54007F4DEF /* ChatGPT.swift in Sources */,
 				ECAB7FB42A1040F1009315D8 /* EditGroupView.swift in Sources */,

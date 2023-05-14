@@ -1,13 +1,19 @@
 //
-//  TestText.swift
+//  ChatView.swift
 //  TakeControl
 //
-//  Created by Blaž Bergant on 13/05/2023.
+//  Created by Blaž Bergant on 14/05/2023.
 //
 
 import SwiftUI
 
-struct TestText: View {
+struct Message: Identifiable {
+    let id = UUID()
+    let text: String
+    let isCurrentUser: Bool
+}
+
+struct ChatView: View {
     @State private var messages: [Message] = [Message(text: "yes", isCurrentUser: true),
                                               Message(text: "no", isCurrentUser: false)]
     @State private var currentMessage = ""
@@ -61,12 +67,8 @@ struct TestText: View {
     }
 }
 
-
-
-
-
-struct TestText_Previews: PreviewProvider {
+struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        TestText()
+        ChatView()
     }
 }
