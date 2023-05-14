@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct GoalsView: View {
-    @State private var week = ""
-    @State private var month = ""
-    @State private var quarter = ""
-    @State private var year = ""
+    @State private var week = "Survive Monday to Friday, thrive on weekend."
+    @State private var month = "Procrastinate wildly, panic later."
+    @State private var quarter = "Set unrealistic goals, blame the universe."
+    @State private var year = "Embrace chaos, blame it on Mercury."
     
     
     
@@ -28,14 +28,26 @@ struct GoalsView: View {
                             
                                 .customShadow()
                             VStack {
-                                Text("Week goal:")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .font(.title2) // or .headline, depending on the look you want
-                                    .bold()
+                                HStack {
+                                    Text("Week goal:")
+                                        .foregroundColor(Color(Cons.blue))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.title2) // or .headline, depending on the look you want
+                                        .bold()
                                     .padding(.horizontal)
+                                    Spacer()
+                                    Image(systemName: "plus").foregroundColor(Color(Cons.blue))
+                                        .padding(.horizontal)
+                                        .font(.system(size: 18, weight: .bold))
+                                }
                                 
                                 
-                                Spacer()
+                                TextEditor(text: $week)
+                                            .font(.body)
+                                            .foregroundColor(.black)
+                                            .background(Color.white)
+                                            .padding(.horizontal)
+                                
                             }
                             .padding(.top)
                             
@@ -49,20 +61,30 @@ struct GoalsView: View {
                             
                                 .customShadow()
                             VStack {
-                                Text("Month goal:")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .font(.title2) // or .headline, depending on the look you want
-                                    .bold()
+                                HStack {
+                                    Text("Month goal:")
+                                        .foregroundColor(Color(Cons.blue))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.title2) // or .headline, depending on the look you want
+                                        .bold()
                                     .padding(.horizontal)
+                                    Spacer()
+                                    Image(systemName: "plus").foregroundColor(Color(Cons.blue))
+                                        .padding(.horizontal)
+                                        .font(.system(size: 18, weight: .bold))
+                                }
                                 
-                                
-                                Spacer()
+                                TextEditor(text: $month)
+                                            .font(.body)
+                                            .foregroundColor(.black)
+                                            .background(Color.white)
+                                            .padding(.horizontal)
                             }
                             .padding(.top)
                             
                         }
                         .padding(.horizontal, 30)
-                        .padding(.top, 30)
+                        .padding(.top, 20)
                         
                         ZStack {
                             RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
@@ -70,20 +92,31 @@ struct GoalsView: View {
                             
                                 .customShadow()
                             VStack {
-                                Text("Quarter goal:")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .font(.title2) // or .headline, depending on the look you want
-                                    .bold()
+                                HStack {
+                                    Text("Quarter goal:")
+                                        .foregroundColor(Color(Cons.blue))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.title2) // or .headline, depending on the look you want
+                                        .bold()
                                     .padding(.horizontal)
+                                    Spacer()
+                                    Image(systemName: "plus").foregroundColor(Color(Cons.blue))
+                                        .padding(.horizontal)
+                                        .font(.system(size: 18, weight: .bold))
+                                }
                                 
                                 
-                                Spacer()
+                                TextEditor(text: $quarter)
+                                            .font(.body)
+                                            .foregroundColor(.black)
+                                            .background(Color.white)
+                                            .padding(.horizontal)
                             }
                             .padding(.top)
                             
                         }
                         .padding(.horizontal, 30)
-                        .padding(.top, 30)
+                        .padding(.top, 20)
                         
                         ZStack {
                             RoundedRectangle(cornerRadius: 15).fill(Color.white).customShadow()
@@ -91,20 +124,31 @@ struct GoalsView: View {
                             
                                 .customShadow()
                             VStack {
-                                Text("Year goal:")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .font(.title2) // or .headline, depending on the look you want
-                                    .bold()
+                                HStack {
+                                    Text("Year goal:")
+                                        .foregroundColor(Color(Cons.blue))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.title2) // or .headline, depending on the look you want
+                                        .bold()
                                     .padding(.horizontal)
+                                    Spacer()
+                                    Image(systemName: "plus").foregroundColor(Color(Cons.blue))
+                                        .padding(.horizontal)
+                                        .font(.system(size: 18, weight: .bold))
+                                }
                                 
                                 
-                                Spacer()
+                                TextEditor(text: $year)
+                                            .font(.body)
+                                            .foregroundColor(.black)
+                                            .background(Color.white)
+                                            .padding(.horizontal)
                             }
                             .padding(.top)
                             
                         }
                         .padding(.horizontal, 30)
-                        .padding(.top, 30)
+                        .padding(.top, 20)
                         
                     }
                 }
