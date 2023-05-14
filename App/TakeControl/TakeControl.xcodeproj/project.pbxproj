@@ -17,6 +17,8 @@
 		A1DBCD312A0FB16C0052A592 /* TakeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */; };
 		A1DBCD332A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */; };
 		D061B53C2A10A5F800C7FA74 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061B53B2A10A5F800C7FA74 /* Secrets.swift */; };
+		D061B5562A10D25D00C7FA74 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = D061B5552A10D25D00C7FA74 /* SwiftUICharts */; };
+		D061B5582A10D50F00C7FA74 /* Circular.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061B5572A10D50F00C7FA74 /* Circular.swift */; };
 		EC35027C2A104D54007F4DEF /* ChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027B2A104D54007F4DEF /* ChatGPT.swift */; };
 		EC35027E2A1056B2007F4DEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027D2A1056B2007F4DEF /* Constants.swift */; };
 		EC3502802A105E3E007F4DEF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35027F2A105E3E007F4DEF /* ChatView.swift */; };
@@ -49,6 +51,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D061B5502A10C72B00C7FA74 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A1DBCD0D2A0FB16A0052A592 /* TakeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DBCD102A0FB16A0052A592 /* TakeControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlApp.swift; sourceTree = "<group>"; };
@@ -63,6 +78,8 @@
 		A1DBCD302A0FB16C0052A592 /* TakeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITests.swift; sourceTree = "<group>"; };
 		A1DBCD322A0FB16C0052A592 /* TakeControlUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeControlUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D061B53B2A10A5F800C7FA74 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		D061B5432A10C72A00C7FA74 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
+		D061B5572A10D50F00C7FA74 /* Circular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circular.swift; sourceTree = "<group>"; };
 		EC35027B2A104D54007F4DEF /* ChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT.swift; sourceTree = "<group>"; };
 		EC35027D2A1056B2007F4DEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC35027F2A105E3E007F4DEF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -84,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D061B5562A10D25D00C7FA74 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +128,7 @@
 				A1DBCD0F2A0FB16A0052A592 /* TakeControl */,
 				A1DBCD252A0FB16C0052A592 /* TakeControlTests */,
 				A1DBCD2F2A0FB16C0052A592 /* TakeControlUITests */,
+				D061B5422A10C72A00C7FA74 /* Frameworks */,
 				A1DBCD0E2A0FB16A0052A592 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,6 +185,14 @@
 			path = TakeControlUITests;
 			sourceTree = "<group>";
 		};
+		D061B5422A10C72A00C7FA74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D061B5432A10C72A00C7FA74 /* DeviceActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EC35027A2A104D2C007F4DEF /* Chat(gpt) */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +236,7 @@
 				ECC020A52A0FE70C00B10072 /* SettingsView */,
 				ECC020A42A0FE6F300B10072 /* GoalsView */,
 				ECC020A12A0FE6AA00B10072 /* MainView */,
+				D061B5572A10D50F00C7FA74 /* Circular.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -267,12 +295,16 @@
 				A1DBCD092A0FB16A0052A592 /* Sources */,
 				A1DBCD0A2A0FB16A0052A592 /* Frameworks */,
 				A1DBCD0B2A0FB16A0052A592 /* Resources */,
+				D061B5502A10C72B00C7FA74 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TakeControl;
+			packageProductDependencies = (
+				D061B5552A10D25D00C7FA74 /* SwiftUICharts */,
+			);
 			productName = TakeControl;
 			productReference = A1DBCD0D2A0FB16A0052A592 /* TakeControl.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +377,9 @@
 				Base,
 			);
 			mainGroup = A1DBCD042A0FB16A0052A592;
+			packageReferences = (
+				D061B5542A10D25D00C7FA74 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = A1DBCD0E2A0FB16A0052A592 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -395,6 +430,7 @@
 				EC72D1012A0FE9690007CE41 /* Health.swift in Sources */,
 				EC72D1152A10109D0007CE41 /* TestText.swift in Sources */,
 				ECAB7FAB2A103FB5009315D8 /* ActivityMonitor.swift in Sources */,
+				D061B5582A10D50F00C7FA74 /* Circular.swift in Sources */,
 				EC35027E2A1056B2007F4DEF /* Constants.swift in Sources */,
 				EC72D1072A0FF7960007CE41 /* SettingsView.swift in Sources */,
 				ECAB7FAD2A103FB5009315D8 /* Model.swift in Sources */,
@@ -733,6 +769,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D061B5542A10D25D00C7FA74 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D061B5552A10D25D00C7FA74 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D061B5542A10D25D00C7FA74 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A1DBCD1B2A0FB16B0052A592 /* TakeControl.xcdatamodeld */ = {
