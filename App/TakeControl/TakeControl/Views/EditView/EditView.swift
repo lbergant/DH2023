@@ -16,7 +16,7 @@ struct RepresentableCircular: UIViewRepresentable {
 struct EditView: View {
 
     let groups = ["News"]
-    let chart = Circular(percentages: [42,58], colors: [.red, UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha:1)],aimationType: .animationFadeIn,showPercentageStyle: .none)
+    let chart = Circular(percentages: [52,48], colors: [.red, UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha:1)],aimationType: .animationFadeIn,showPercentageStyle: .none)
 
     var body: some View {
         NavigationView {
@@ -38,9 +38,9 @@ struct EditView: View {
                                     .padding(.horizontal)
                                 
                                 RepresentableCircular(chart: chart)
-                                                                    .frame(width: 150, height: 150)
+                                                                    .frame(width: 140, height: 140)
                                 
-                                Text("4800/10000")
+                                Text("5354/10000")
                                     .frame(maxWidth: .infinity)
                                 Spacer()
                                 Spacer()
